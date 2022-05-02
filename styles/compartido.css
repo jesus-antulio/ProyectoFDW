@@ -1,0 +1,32 @@
+body{ padding: 0; margin: 0;}
+
+.header{
+    margin: auto;
+    display: flex;
+    height: 15%;
+    width: 100%;
+    background-color: rgb(203, 227, 233);
+    color: rgb(49, 49, 49);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.header .logo{
+    margin: auto;
+}
+.header .menu{
+    margin: auto;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17pt;
+    text-decoration: none;
+    font-weight: bold;
+}
+.header .menu a{
+    padding: 70px;
+}
+.header .carrito{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.header .perfil{
+    margin: auto;
+}
