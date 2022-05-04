@@ -3,6 +3,7 @@ body{ padding: 0; margin: 0;}
 .header{
     margin: auto;
     display: flex;
+    position: fixed;
     height: 15%;
     width: 100%;
     background-color: rgb(203, 227, 233);
@@ -29,4 +30,19 @@ body{ padding: 0; margin: 0;}
 }
 .header .perfil{
     margin: auto;
+}
+
+.footer{
+    margin: auto;
+    display: flex;
+    height: 15%;
+    width: 100%;
+    background-color: rgb(203, 227, 233);
+    color: rgb(49, 49, 49);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.footer-content{
+    margin: auto;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
