@@ -22,11 +22,11 @@ body{ padding: 0; margin: 0;}
     font-weight: bold;
 }
 .header .menu a{
-    text-decoration:none;
-    padding-top:15px;
-    padding-bottom:15px;
-    padding-left:40px;
-    padding-right:40px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
     color: rgb(49, 49, 49);
 }
 .header .carrito{
