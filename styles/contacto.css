@@ -1,0 +1,42 @@
+.banner {
+    height: 400px;
+    background-image: url(../assets/contacto-banner.jpg);
+    background-size: cover;
+}
+.info{
+    font-family: "Open Sans",sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.info h1 {
+    font-size: 35pt;
+    text-align: center;
+}
+.info label{
+    font-size: 20pt;
+    font-weight: bold;
+}
+.info span {
+    color: rgb(180, 180, 180);
+    font-style: italic;
+
+}
+.info nota {
+    font-size: 12pt;
+    color: gray;
+    font-style: italic;
+}
+.info .input{
+    width: 40%;
+    height: 5%;
+    font-family: "Arial",sans-serif;
+    font-size: 12pt;
+}
+.info .form{
+    width: 70%;
+    height: 20%;
+    border: 1px solid gray;
+    font-family: "Arial",sans-serif;
+}
+
+
