@@ -7,24 +7,22 @@
         <link rel="stylesheet" href="../styles/productos.css">
     </head>
     <body>
-        <div class="container">
-            <div class="header">
-                <div class="logo">
-                    <img src="../assets/logo.png"  >
-                </div>
-                <div class="menu">
-                    <a href="index.html">Inicio</a>
-                    <a href="productos.html">Productos</a>
-                    <a href="contacto.html">Contacto</a>
-                </div>
-                <div class="carrito">
-                    <i class="fa-solid fa-cart-shopping fa-2x"></i>
-                    <!-- <img src="../assets/carrito.png"> -->
-                </div>
-                <div class="perfil">
-                    <i class="fa-regular fa-circle-user fa-4x" ></i>
-                    <!-- <img src="../assets/perfil.png"> -->
-                </div>
+        <div class="header">
+            <div class="logo">
+                <img src="../assets/logo.png"  >
+            </div>
+            <div class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="carrito">
+                <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                <!-- <img src="../assets/carrito.png"> -->
+            </div>
+            <div class="perfil">
+                <i class="fa-regular fa-circle-user fa-4x" ></i>
+                <!-- <img src="../assets/perfil.png"> -->
             </div>
         </div>
         <div class="footer">
