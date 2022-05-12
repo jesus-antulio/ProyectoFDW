@@ -14,23 +14,7 @@
         <?php
             include '../components/header.php';
         ?>
-        <!-- <div class="header">
-            <div class="logo">
-                <img src="../assets/logo.png"  >
-            </div>
-            <div class="menu">
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="contacto.html">Contacto</a>
-            </div>
-            <div class="carrito">
-                <i class="fa-solid fa-cart-shopping fa-2x"></i>
-            </div>
-            <div class="perfil">
-                <i class="fa-regular fa-circle-user fa-4x" ></i>
-            </div>
-        </div> -->
-
+        
         <div class = "banner"></div>
         
         <div class="content">
@@ -57,17 +41,6 @@
         <?php
             include '../components/footer.php';
         ?>
-        <!-- <div class="footer">
-            <div class="footer-content">
-                <div class="footer-content-left">
-                    <h1>REDES SOCIALES</h1>
-                    <i class="fa-brands fa-facebook fa-2xl" ></i>
-                    <i class="fa-brands fa-instagram fa-2xl"></i>
-                    <i class="fa-brands fa-twitter fa-2xl"></i>
-                </div>
-                <div class="footer-content-right">
-                </div>
-            </div>
-        </div> -->
+        
     </body>
 </html>
