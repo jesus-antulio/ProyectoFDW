@@ -1,0 +1,73 @@
+.banner{
+    height: 500px;
+    background-image: url(../assets/productos-banner.jpg);
+    background-size: cover;
+}
+
+.container{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 20px;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 40pt;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.producto{
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    background-color: rgb(210, 210, 210);
+    border-radius: 5px;
+    text-align: center;
+}
+.producto .producto-img{
+    width: 225px;
+    height: 225px;
+    padding-top: 5px;
+    margin: 0px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.producto .producto-info{
+    text-align: justify;
+    padding: 10px;
+}
+.producto .producto-info h2{
+    font-size: 18pt;
+    line-height: 0.5em;
+}
+.producto .producto-info p{
+    font-size: 12pt;
+}
+.producto .producto-info a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(167, 54, 50);
+    border: 3px solid white;
+    border-radius: 100px;
+    padding: 7px;
+}
+.producto .producto-info a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(187, 0, 0);
+    border: 3px solid white;
+    border-radius: 100px;
+    padding: 7px;
+}
+.producto .producto-info label{
+    font-weight: bold;
+    margin-left: 65%;
+}
+
