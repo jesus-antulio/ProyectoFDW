@@ -12,21 +12,20 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
-    height: 300px;
 }
-.login{
+.datos{
     width: 40%;
     margin-top: 30px;
     align-items: center;
 }
-.login input{
+.datos input{
     width: 100%;
     height: 25px;
     border-radius: 5px;
     border: 1px solid #ccc;
     padding-left: 10px;
 }
-.login input[type="submit"]{
+.datos input[type="submit"]{
     width: 50%;
     height: 30px;
     border-radius: 5px;
@@ -35,7 +34,7 @@
 .line{    
     border: 1px solid gray;
 }
-.registro{
+.opciones{
     margin-top: 60px;
     align-items: center;
 }
