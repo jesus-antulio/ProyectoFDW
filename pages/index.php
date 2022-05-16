@@ -11,9 +11,7 @@
         <link rel="stylesheet" href="../styles/homePage.css">
     </head>
     <body>
-        <?php
-            include '../components/header.php';
-        ?>
+        <?php include '../components/header.php'; ?>
         
         <div class = "banner"></div>
         

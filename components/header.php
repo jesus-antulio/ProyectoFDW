@@ -11,6 +11,8 @@
         <i class="fa-solid fa-cart-shopping fa-2x"></i>
     </div>
     <div class="perfil">
-        <i class="fa-regular fa-circle-user fa-4x" ></i>
+        <a href = "../pages/login.php"> 
+            <i class="fa-regular fa-circle-user fa-4x" ></i>
+        </a>
     </div>
 </div>
