@@ -14,7 +14,7 @@
         <div class="banner"></div>
 
         <div class="info">
-            <h1>CONTÁCTANOS</h1>
+            <h1>Contáctanos</h1>
             <div>
                 <nota>*Campos obligatorios</nota>
             </div>
