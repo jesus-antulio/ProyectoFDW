@@ -8,7 +8,9 @@
         <a href="contacto.php">Contacto</a>
     </div>
     <div class="carrito">
-        <i class="fa-solid fa-cart-shopping fa-2x"></i>
+        <a href="../pages/carrito.php">
+            <i class="fa-solid fa-cart-shopping fa-2x"></i>
+        </a>
     </div>
     <div class="perfil">
         <a href = "../pages/login.php"> 
