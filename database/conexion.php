@@ -11,7 +11,7 @@
         #Constructor
         public function __construct(){
             $this->host = "localhost";
-            $this->db = "usuarios";
+            $this->db = "reposteria";
             $this->usuario = "root";
             $this->pass = "";
             $this->charset = "utf8";
@@ -25,4 +25,3 @@
             return $enlace;
         }
     }
-?>

@@ -16,15 +16,15 @@
         <h1> Registrate </h1>
         <div class="flex-container">
             <div class="datos">
-                <form action="../controllers/login.php" method="post">
+                <form action="../controllers/singup.php" method="post">
                     <p> Nombre </p>
-                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="text" name="nombre" placeholder="Nombre" >
                     <p> Correo </p>
-                    <input type="email" name="email" placeholder="Correo" required>
+                    <input type="text" name="correo" placeholder="Correo" >
                     <p> Contraseña </p>
-                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <input type="password" name="pass" placeholder="Contraseña" >
                     <p> Telefono </p>
-                    <input type="text" name="phone" placeholder="Telefono" required>
+                    <input type="text" name="phone" placeholder="Telefono">
                     <p> </p>
                     <input type="submit" value="Registrarse">
                 </form>

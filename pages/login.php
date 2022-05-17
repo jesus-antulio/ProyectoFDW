@@ -20,7 +20,7 @@
                     <p> Correo Electrónico </p>
                     <input type="text" name="correo" placeholder="Correo">
                     <p> Contraseña </p>
-                    <input type="password" name="password" placeholder="Contraseña">
+                    <input type="password" name="pass" placeholder="Contraseña">
                     <p></p>
                     <input type="submit" value="Iniciar Sesión">
                 </form>
