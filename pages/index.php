@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    function logout(){
+        session_destroy();
+    }
+
+    if(isset($_GET['band'])){
+        logout();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

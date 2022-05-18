@@ -17,4 +17,14 @@
             <i class="fa-regular fa-circle-user fa-4x" ></i>
         </a>
     </div>
+    <?php
+    if(isset($_SESSION['rol'])){
+        echo
+        '<div class="perfil">
+            <a href = "../pages/index.php?band=true">
+                <i class="fa-solid fa-user-xmark fa-2x"></i>
+            </a>
+        </div>';
+    }
+    ?>
 </div>

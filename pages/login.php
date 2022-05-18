@@ -1,11 +1,11 @@
 <?php
-        session_start();
+    session_start();
 
-        if(isset($_SESSION['rol'])){
-            if(isset($_SESSION['rol']) == 1){
-                header('Location: ../pages/index.php');
-            } 
-        }
+    if(isset($_SESSION['rol'])){
+        if(isset($_SESSION['rol']) == 1){
+            header('Location: ../pages/index.php');
+        } 
+    }
 ?>
 
 <!DOCTYPE html>
