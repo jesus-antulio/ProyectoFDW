@@ -23,8 +23,16 @@
             </div>
             <div>
                 <h2> <?php echo $_SESSION['nombre']; ?> </h2>
-                <p> <?php echo $_SESSION['correo']; ?> </p>
-                <p> <?php echo $_SESSION['telefono']; ?> </p>
+                <p> <b>Correo: </b><?php echo $_SESSION['correo']; ?> </p>
+                <p> <b>Teléfono: </b> <?php echo $_SESSION['telefono']; ?> </p>
+                <p> <b>Tipo de cuenta: </b> 
+                    <?php 
+                    if(isset($_SESSION['rol']) == 1){
+                        echo "Cliente";
+                    }
+                    ?> 
+                </p>
+                
             </div>
         </div>    
     </div>
