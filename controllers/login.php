@@ -10,7 +10,6 @@
         $cad = new CAD();
         if($cad->verificaUsuario($correo, $pass)){
             $_SESSION['correo'] = $correo;
-            $_SESSION['rol'] = 1;
             header('Location: ../pages/index.php');
         } else {
             echo

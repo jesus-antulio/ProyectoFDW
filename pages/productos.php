@@ -21,18 +21,20 @@
         <h1>Productos</h1>
         <div class="flex-container">
             <?php
-                echo "
-                <div class='producto'>
-                    <div class='producto-img'>
-                        img
-                    </div>
-                    <div class='producto-info'>
-                        <h2>Producto 1</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
-                        <a href='#'>Ver más</a>
-                        <label>$$$</label>
-                    </div>
-                </div>";
+                for($i = 0; $i < 9; $i++){
+                    echo "
+                    <div class='producto'>
+                        <div class='producto-img'>
+                            img
+                        </div>
+                        <div class='producto-info'>
+                            <h2>Producto 1</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                            <a href='#'>Ver más</a>
+                            <label>$$$</label>
+                        </div>
+                    </div>";
+                }
             ?>
         </div>
     </div>

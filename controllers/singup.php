@@ -9,12 +9,11 @@
         $correo = $_POST['correo'];
         $pass = $_POST['pass'];
         $telefono = $_POST['phone'];
+        $rol = 1;
 
         $cad = new CAD();
-        $cad->agregaUsuario($nombre, $pass, $correo, $telefono);
+        $cad->agregaUsuario($nombre, $pass, $correo, $telefono, $rol);
     } else {
-        echo $_POST['nombre'].'-'.$_POST['correo'].'-'.$_POST['pass'].'-'.$_POST['phone'];
-        echo
         '
         <script>
                 alert("Favor de llenar todos los datos");

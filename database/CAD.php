@@ -6,16 +6,16 @@ class CAD
 {
     public $con;
 
-    static public function agregaUsuario($nombre, $pass, $mail, $telefono)
+    static public function agregaUsuario($nombre, $pass, $mail, $telefono, $rol)
     {
         $con = new Conexion(); //Establecer conexión a la BD
-        $query = $con->conectar()->prepare("INSERT INTO usuarios (nombre, correo, contraseña, telefono) VALUES ('$nombre', '$mail', '$pass', '$telefono')");
+        $query = $con->conectar()->prepare("INSERT INTO usuarios (nombre, correo, contraseña, telefono, rol) VALUES ('$nombre', '$mail', '$pass', '$telefono', '$rol')");
 
         if ($query->execute()) {
             // echo 'El usuario '.$nombre.' se ha registrado correctamente';
             echo
             '<script>
-                    alert("El usuario ' . $nombre . ' se ha registrado correctamente");
+                    alert("El usuario ' . $nombre . ' se ha registrado correctamente. Ahora ya puedes iniciar sesión");
                     window.location.href="../pages/login.php";	
             </script>';
         } else {
@@ -38,6 +38,7 @@ class CAD
                 $_SESSION['nombre'] = $row[1];
                 $_SESSION['correo'] = $row[2];
                 $_SESSION['telefono'] = $row[4];
+                $_SESSION['rol'] = $row[5];
                 return true;
             }
         } else {
