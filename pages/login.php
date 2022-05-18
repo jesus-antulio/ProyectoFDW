@@ -3,8 +3,8 @@
 
     if(isset($_SESSION['rol'])){
         if(isset($_SESSION['rol']) == 1){
-            header('Location: ../pages/index.php');
-        } 
+            header('Location: ../pages/perfil.php');
+        }
     }
 ?>
 
