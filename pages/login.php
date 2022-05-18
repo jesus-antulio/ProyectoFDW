@@ -2,9 +2,7 @@
     session_start();
 
     if(isset($_SESSION['rol'])){
-        if(isset($_SESSION['rol']) == 1){
-            header('Location: ../pages/perfil.php');
-        }
+        header('Location: ../pages/perfil.php');
     }
 ?>
 

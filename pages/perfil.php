@@ -1,4 +1,9 @@
-<?php session_start() ?>
+<?php 
+    session_start();
+    if(!isset($_SESSION['rol'])){
+        header('Location: index.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,12 +32,20 @@
                 <p> <b>Teléfono: </b> <?php echo $_SESSION['telefono']; ?> </p>
                 <p> <b>Tipo de cuenta: </b> 
                     <?php 
-                    if(isset($_SESSION['rol']) == 1){
-                        echo "Cliente";
+                    switch ($_SESSION['rol']) {
+                        case '1':
+                            echo "Cliente";
+                            break;
+                        case '2':
+                            echo "Administrador";
+                            break;
+                        default:
+                            echo "No definido";
+                            break;
                     }
                     ?> 
                 </p>
-                
+
             </div>
         </div>    
     </div>
