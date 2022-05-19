@@ -19,13 +19,21 @@
 
     <div class="container">
         <h1>Productos</h1>
+        <?php
+        if (isset($_SESSION['rol']) && $_SESSION['rol'] == 2) {
+            echo '
+            <center>
+                <a href="../pages/agregarProducto.php" class="btn-agregar">Agregar Productos</a>
+            </center>';
+        }
+        ?>
         <div class="flex-container">
             <?php
                 for($i = 0; $i < 9; $i++){
                     echo "
                     <div class='producto'>
                         <div class='producto-img'>
-                            img
+                            <img src='../assets/producto.png'/>
                         </div>
                         <div class='producto-info'>
                             <h2>Producto 1</h2>
