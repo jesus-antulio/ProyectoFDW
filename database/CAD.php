@@ -45,4 +45,24 @@ class CAD
             return false;
         }
     }
+
+    static public function agregarProducto($producto, $descripcion, $precio, $stock, $imagen){
+        $con = new Conexion(); //Establecer conexión a la BD
+        $query = $con->conectar()->prepare("INSERT INTO productos (nombre, descripcion, cantidad, precio, imagen) VALUES ('$producto', '$descripcion', '$stock', '$precio', '$imagen')");
+
+        if ($query->execute()) {
+            // echo 'El usuario '.$nombre.' se ha registrado correctamente';
+            echo
+            '<script>
+                    alert("El producto ' . $producto . ' se ha registrado correctamente");
+                    window.location.href="../pages/agregarProducto.php";	
+            </script>';
+        } else {
+            echo
+            '<script>
+                    alert("Error al registrar el producto");
+                    window.location.href="../pages/agregarProducto.php";
+            </script>';
+        }
+    }
 }
