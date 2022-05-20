@@ -28,7 +28,9 @@
                 "<div class='carrito'>
                     <h2>Productos</h2>
                     <div class='product'>
-                        <div class='imgP'>imagen</div>
+                        <div class='imgP'>
+                            <img src='../images/producto.png'>
+                        </div>
                         <div class='datP'>
                             <h3>Producto 1</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>

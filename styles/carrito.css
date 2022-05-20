@@ -32,7 +32,10 @@
     margin-right: 5px;
     width: 90px;
     height: 90px;
-    border: 1px solid black;
+}
+.datos .carrito .product .imgP img{
+    width: 90px;
+    height: 90px;
 }
 .datos .carrito h3{
     font-size: 15pt;
