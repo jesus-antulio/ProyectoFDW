@@ -20,24 +20,20 @@
             <div>
                 <nota>*Campos obligatorios</nota>
             </div>
-            <div>
-                <label>
-                    <span>*</span>Nombre: <br/>
-                    <input type="text" name="nombre" class="input" /> <br />
-                </label>
-                <label>
-                    <span>*</span>Apellido: <br/>
-                    <input type="text" name="apellido" class="input" /> <br />
-                </label>
-                <label>
-                    <span>*</span>Correo: <br/>
-                    <input type="text" name="correo" class="input" /> <br />
-                </label>
-                <label>
-                    <span>*</span>Mensaje: <br>
-                    <textarea class="form"></textarea>
-                </label>
-            </div>
+            
+            <form>
+                <p> <span>*</span>Nombre </p>
+                <input type="text" name="nombre" placeholder="Nombre">
+                <p> Apellido: </p>
+                <input type="text" name="apellido" placeholder="Apellido">
+                <p> <span>*</span>Correo electrónico: </p>
+                <input type="text" name="email" placeholder="Correo electrónico">
+                <p> Teléfono: </p>
+                <input type="text" name="telefono" placeholder="Teléfono">
+                <p> <span>*</span>Mensaje: </p>
+                <textarea name="mensaje" placeholder="Mensaje"></textarea> <br>
+                <input type="submit" value="Enviar">
+            </form>
         </div>
 
         <?php
