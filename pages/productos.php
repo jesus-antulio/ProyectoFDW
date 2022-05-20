@@ -33,7 +33,7 @@
                     echo "
                     <div class='producto'>
                         <div class='producto-img'>
-                            <img src='../assets/producto.png'/>
+                            <img src='../images/producto.png'/>
                         </div>
                         <div class='producto-info'>
                             <h2>Producto 1</h2>
