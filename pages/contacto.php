@@ -2,10 +2,8 @@
 
 <html>
     <head>
+        <?php include '../components/info.php'; ?>
         <title>Reposteria | Contacto</title>
-        <link rel="shortcut icon" type="image/jpg" href="../assets/logo.png" />
-        <script src="https://kit.fontawesome.com/933e55e7ca.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../styles/compartido.css">
         <link rel="stylesheet" href="../styles/contacto.css">
     </head>
     <body>
