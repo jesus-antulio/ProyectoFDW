@@ -10,7 +10,7 @@
 
         #Constructor
         public function __construct(){
-            $this->host = "localhost:3307";
+            $this->host = "localhost";
             $this->db = "reposteria";
             $this->usuario = "root";
             $this->pass = "";
