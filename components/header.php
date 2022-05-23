@@ -22,7 +22,7 @@
         echo
         '<div class="perfil">
             <a href = "../pages/index.php?band=true">
-                <i class="fa-regular fa-circle-xmark fa-2x"></i>
+            <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
             </a>
         </div>';
     }

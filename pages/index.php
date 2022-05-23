@@ -20,7 +20,10 @@
         <script src="https://kit.fontawesome.com/933e55e7ca.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../styles/compartido.css">
         <link rel="stylesheet" href="../styles/homePage.css">
-    </head>
+        <!-- FUENTES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Courgette&family=Pacifico&family=Tillana&display=swap" rel="stylesheet">      
     <body>
         <?php include '../components/header.php'; ?>
         

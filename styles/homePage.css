@@ -7,27 +7,28 @@
 .content{
     padding-left: 30px;
     padding-right: 30px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .content h1{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Pacifico', cursive;
     text-align: center;
     font-size: 50pt;
 }
 
 .content h2{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Courgette', cursive;
     text-align: center;
     font-size: 30pt;
 }
 
 .content p{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Tillana', cursive;
     text-align: center;
     font-size: 20pt;
 }
 
 .content ul li{
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Tillana', cursive;
     font-size: 18pt;
 }
