@@ -24,14 +24,14 @@
 
 }
 .info input{
-    width: 100%;
+    width: 50%;
     height: 25px;
     border-radius: 5px;
     border: 1px solid #ccc;
     padding-left: 10px;
 }
 .info input[type="submit"]{
-    width: 50%;
+    width: 25%;
     height: 30px;
     border-radius: 5px;
     border: 1px solid #ccc;

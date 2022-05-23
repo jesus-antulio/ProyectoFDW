@@ -32,7 +32,9 @@
                 <input type="text" name="telefono" placeholder="Teléfono">
                 <p> <span>*</span>Mensaje: </p>
                 <textarea name="mensaje" placeholder="Mensaje"></textarea> <br>
-                <input type="submit" value="Enviar">
+                <center>
+                    <input type="submit" value="Enviar">
+                </center>
             </form>
         </div>
 
