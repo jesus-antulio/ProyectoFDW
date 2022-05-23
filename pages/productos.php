@@ -24,20 +24,9 @@
         ?>
         <div class="flex-container">
             <?php
-                for($i = 0; $i < 9; $i++){
-                    echo "
-                    <div class='producto'>
-                        <div class='producto-img'>
-                            <img src='../images/producto.png'/>
-                        </div>
-                        <div class='producto-info'>
-                            <h2>Producto 1</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
-                            <a href='#'>Ver más</a>
-                            <label>$$$</label>
-                        </div>
-                    </div>";
-                }
+                require_once '../database/CAD.php';
+                $cad = new CAD();
+                $cad -> mostrarProductos();
             ?>
         </div>
     </div>

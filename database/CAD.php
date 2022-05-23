@@ -65,4 +65,36 @@ class CAD
             </script>';
         }
     }
+
+    static public function mostrarProductos(){
+        $con = new Conexion(); //Establecer conexión a la BD
+        $query = $con->conectar()->prepare("SELECT * FROM productos");
+        if($query->execute()){
+            while($row = $query->fetch(PDO::FETCH_ASSOC)){
+                $datos[] = $row;
+            }
+
+            $tam = count($datos);            
+            for($i = 0; $i < $tam; $i++){
+                $nombre = $datos[$i]['nombre'];
+                $descripcion = $datos[$i]['descripcion'];
+                $precio = '$'.$datos[$i]['precio'];
+                $stock = $datos[$i]['cantidad'];
+                $imagen = $datos[$i]['imagen'];
+
+                echo "
+                <div class='producto'>
+                    <div class='producto-img'>
+                        <img src='$imagen'/>
+                    </div>
+                    <div class='producto-info'>
+                        <h2>$nombre</h2>
+                        <p>$descripcion</p>
+                        <a href='#'>Ver más</a>
+                        <label>$precio</label>
+                    </div>
+                </div>";
+            }
+        }
+    }
 }
