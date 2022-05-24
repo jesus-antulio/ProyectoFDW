@@ -27,6 +27,44 @@
                 require_once '../database/CAD.php';
                 $cad = new CAD();
                 $cad -> mostrarProductos();
+
+                for($i = 0; $i < $_SESSION['tam']; $i++){
+                    $id = $_SESSION['info'][$i]['id_producto'];
+                    $nombre = $_SESSION['info'][$i]['nombre'];
+                    $descripcion = $_SESSION['info'][$i]['descripcion'];
+                    $precio = "$".$_SESSION['info'][$i]['precio'];
+                    $imagen = $_SESSION['info'][$i]['imagen'];
+
+                    echo "
+                    <div class='producto'>
+                        <div class='producto-img'>
+                            <img src='$imagen'/>
+                        </div>
+                        <div class='producto-info'>
+                            <h2>$nombre</h2>
+                            <p>$descripcion</p>
+                            <a href='#'>Ver más</a>
+                            <label>$precio</label>
+                        </div>
+                    </div>";
+
+
+                    // echo "
+                    // <div class='producto'>
+                    //     <div class='img'>
+                    //         <img src='$imagen' alt='$nombre'>
+                    //     </div>
+                    //     <div class='producto-info'>
+                    //         <h2>$nombre</h2>
+                    //         <p>$descripcion</p>
+                    //         <p>$precio</p>
+                    //     </div>
+                    //     <div class='btn-container'>
+                    //         <a href='../pages/producto.php?id='.$id.'' class='btn-ver'>Ver</a>
+                    //         <a href='../pages/carrito.php?id='.$id.'' class='btn-carrito'>Agregar al carrito</a>
+                    //     </div>
+                    // </div>";
+                }
             ?>
         </div>
     </div>

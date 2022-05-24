@@ -1,0 +1,10 @@
+.container {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 40px;
+    padding-top: 7%;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 40pt;
+}
