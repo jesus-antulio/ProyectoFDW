@@ -74,27 +74,9 @@ class CAD
                 $datos[] = $row;
             }
 
-            $tam = count($datos);            
-            for($i = 0; $i < $tam; $i++){
-                $nombre = $datos[$i]['nombre'];
-                $descripcion = $datos[$i]['descripcion'];
-                $precio = '$'.$datos[$i]['precio'];
-                $stock = $datos[$i]['cantidad'];
-                $imagen = $datos[$i]['imagen'];
-
-                echo "
-                <div class='producto'>
-                    <div class='producto-img'>
-                        <img src='$imagen'/>
-                    </div>
-                    <div class='producto-info'>
-                        <h2>$nombre</h2>
-                        <p>$descripcion</p>
-                        <a href='#'>Ver más</a>
-                        <label>$precio</label>
-                    </div>
-                </div>";
-            }
+            $tam = count($datos);
+            $_SESSION['info'] = $datos;
+            $_SESSION['tam'] = $tam;
         }
     }
 }
