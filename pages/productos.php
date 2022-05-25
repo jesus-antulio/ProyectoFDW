@@ -43,7 +43,7 @@
                         <div class='producto-info'>
                             <h2>$nombre</h2>
                             <p>$descripcion</p>
-                            <a href='#'>Ver más</a>
+                            <a href='info-producto.php?id=$id'>Ver más</a>
                             <label>$precio</label>
                         </div>
                     </div>";

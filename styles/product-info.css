@@ -5,6 +5,46 @@
 }
 
 .container h1{
+    font-family: 'Pacifico', cursive;
     text-align: center;
     font-size: 40pt;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion p{
+    font-size: 20pt;
+    margin: 0 auto;
+}
+
+.informacion button{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    font-size: 20pt;
+    cursor: pointer;
 }
