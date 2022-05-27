@@ -56,8 +56,8 @@
                                 <button class='btn-comprar'
                                         type='submit'> Añadir al carrito </button>
                                 <?php if(isset($_SESSION['rol']) && $_SESSION['rol'] == 2){ ?>
-                                    <button class='btn-editar'><a href='../pages/editarProducto.php?id=$idP'>Editar</a></button>
-                                    <button class='btn-eliminar'><a href='../controllers/eliminarProducto.php?id=$idP'>Eliminar</a></button>
+                                    <button class='btn-editar'><a href='../pages/editarProducto.php?id=<?php echo $idP ?>'>Editar</a></button>
+                                    <button class='btn-eliminar'><a href='../controllers/eliminarProducto.php?id=<?php echo $idP ?>'>Eliminar</a></button>
                                 <?php } ?>
                             </div>
                         </div>

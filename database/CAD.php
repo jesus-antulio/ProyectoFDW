@@ -67,6 +67,25 @@ class CAD
         }
     }
 
+    static public function modificarProducto($id_producto, $producto, $descripcion, $precio, $stock, $imagen){
+        $con = new Conexion(); //Establecer conexión a la BD
+        $query = $con->conectar()->prepare("UPDATE productos SET nombre = '$producto', descripcion = '$descripcion', cantidad = '$stock', precio = '$precio', imagen = '$imagen' WHERE id_producto = '$id_producto'");
+
+        if ($query->execute()) {
+            echo
+            '<script>
+                    alert("El producto ' . $producto . ' se ha modificado correctamente");
+                    window.location.href="../pages/productos.php";	
+            </script>';
+        } else {
+            echo
+            '<script>
+                    alert("Error al modificar el producto");
+                    window.location.href="../pages/productos.php";
+            </script>';
+        }
+    }
+
     static public function mostrarProductos(){
         $con = new Conexion(); //Establecer conexión a la BD
         $query = $con->conectar()->prepare("SELECT * FROM productos");
