@@ -14,7 +14,8 @@
         <?php
             if(isset($_GET['id'])){
                 $id = $_GET['id'];
-
+                $band = false;
+                
                 for ($i = 0; $i < $_SESSION['tam']; $i++) {
                     if ($_SESSION['info'][$i]['id_producto'] == $id) {
                         $nombre = $_SESSION['info'][$i]['nombre'];
@@ -22,22 +23,30 @@
                         $precio = "$".$_SESSION['info'][$i]['precio'];
                         $imagen = $_SESSION['info'][$i]['imagen'];
                         $stock = $_SESSION['info'][$i]['cantidad'];
+                        $band = true;
                     }
                 }
-                echo "
-                <h1> $nombre </h1>
-                <div class='flex-container'>
-                    <div class='image-container'>
-                        <img src='$imagen' alt='$imagen' />
+
+                if($band){
+                    echo "
+                    <h1> $nombre </h1>
+                    <div class='flex-container'>
+                        <div class='image-container'>
+                            <img src='$imagen' alt='$imagen' />
+                        </div>
+                        <div class='informacion'>
+                            <p> $descripcion </p>
+                            <p> Precio: $precio </p>
+                            <p> Stock: $stock </p>
+                            <button> Agregar al carrito </button>
+                        </div>
                     </div>
-                    <div class='informacion'>
-                        <p> $descripcion </p>
-                        <p> Precio: $precio </p>
-                        <p> Stock: $stock </p>
-                        <button> Agregar al carrito </button>
-                    </div>
-                </div>
-                ";
+                    ";
+                } else {
+                    echo "
+                    <h1> No se encontró el producto </h1>
+                    ";
+                }
             } else {
                 echo "
                 <h1> Productos </h1>
@@ -53,7 +62,16 @@
                 </div>
                 ";
             }
-
+            
+            if(isset($_SESSION['rol']) && $_SESSION['rol'] == 2){
+                echo "
+                <center>
+                    <button class='editar'> 
+                        <a>Editar</a>
+                    </button>
+                </center>
+                ";
+            }
         ?>
     
 
