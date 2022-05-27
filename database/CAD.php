@@ -80,4 +80,19 @@ class CAD
             $_SESSION['tam'] = $tam;
         }
     }
+
+    static public function crearVenta($idUsuario, $productos, $total){
+        $con = new Conexion(); //Establecer conexión a la BD
+        $query = $con->conectar()->prepare("INSERT INTO venta (id_usuario, productos, total, fecha_compra) VALUES ('$idUsuario', '$productos', '$total', NOW())");
+
+        if ($query->execute()) {
+            header('Location: ../controllers/sendMail.php');
+        } else {
+            echo
+            '<script>
+                    alert("Error al registrar la venta");
+                    window.location.href="../pages/index.php";
+            </script>';
+        }
+    }
 }

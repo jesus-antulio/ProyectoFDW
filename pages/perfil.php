@@ -40,6 +40,7 @@
                     }
                     ?> 
                 </p>
+                <p> <b> ID de usuario: </b> <?php echo $_SESSION['idUsuario']; ?> </p>
 
             </div>
         </div>    

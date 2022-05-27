@@ -51,8 +51,8 @@
                             <h3><?php echo $carrito[$i]['producto'] ?></h3>
                             <p><?php echo $carrito[$i]['descripcion'] ?></p>
                             <div class='flex'>
-                                <p><b>$<?php echo $carrito[$i]['precio'] ?> -</b></p>
-                                <p><b> - <?php echo $carrito[$i]['cantidad'] ?> unidade(s) </b></p>
+                                <p><b>$<?php echo $carrito[$i]['precio'] ?> </b></p>
+                                <p><b> <?php echo $carrito[$i]['cantidad'] ?> unidade(s) </b></p>
                             </div>
                         </div>
                         <?php
@@ -63,7 +63,13 @@
                             <div class='total'>
                                 <p>Total: $".$total."</p>
                             </div>
-                            <a type='button' href='../controllers/borrarCarrito.php'> Borrar Carrito </a>
+                            <div class='boton'>
+                                <form action='../controllers/comprar.php' method='POST'>
+                                    <input type='hidden' name='total' value='".$total."'>
+                                    <input type='submit' value='Comprar'>
+                                </form>
+                                <a href='../controllers/borrarCarrito.php'> <button>Borrar Carrito</burron> </a>
+                            </div>
                             ";
                         } else {
                             echo "<h2>No hay productos en el carrito</h2>";

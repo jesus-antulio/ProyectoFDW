@@ -24,7 +24,7 @@
             <div class="info"> 
                 <h1>Bienvenido a Reposteria</h1>
                 <p>
-                    En esta pagina encontraras todo lo necesario para poder elavorar todos tus postres,
+                    En esta pagina encontraras todo lo necesario para poder elaborar todos tus postres,
                     desde lo más sencillo hasta lo más complejo.
                 </p>
                 <h2>Productos</h2>
