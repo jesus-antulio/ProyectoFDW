@@ -5,7 +5,7 @@
 <head>
     <?php include '../components/info.php'; ?>
     <title>Resposteria | Productos </title>
-    <link rel="stylesheet" href="../styles/product-info.css">
+    <link rel="stylesheet" href="../styles/detalleProducto.css">
 </head>
 <body>
     <?php include '../components/header.php'; ?>
@@ -20,7 +20,7 @@
                     if ($_SESSION['info'][$i]['id_producto'] == $id) {
                         $nombre = $_SESSION['info'][$i]['nombre'];
                         $descripcion = $_SESSION['info'][$i]['descripcion'];
-                        $precio = "$".$_SESSION['info'][$i]['precio'];
+                        $precio = $_SESSION['info'][$i]['precio'];
                         $imagen = $_SESSION['info'][$i]['imagen'];
                         $stock = $_SESSION['info'][$i]['cantidad'];
                         $band = true;
@@ -29,18 +29,26 @@
 
                 if($band){
                     echo "
-                    <h1> $nombre </h1>
-                    <div class='flex-container'>
-                        <div class='image-container'>
-                            <img src='$imagen' alt='$imagen' />
-                        </div>
-                        <div class='informacion'>
-                            <p> $descripcion </p>
-                            <p> Precio: $precio </p>
-                            <p> Stock: $stock </p>
-                            <button> Agregar al carrito </button>
-                        </div>
-                    </div>
+                    <form id='formulario' name='formulario' method='post' action='../controllers/cart.php'>
+                        <input name='imagen' type='hidden' name='imagen' value='$imagen'>
+                        <input name='producto' type='hidden' id='producto' value='$nombre' />
+                        <input name='descripcion' type='hidden' id='descripcion' value='$descripcion' />
+                        <input name='precio' type='hidden' id='precio' value='$precio' />
+                        <input name='cantidad' type='hidden' id='cantidad' value=1 />
+
+                        <h1> $nombre </h1>
+                            <div class='flex-container'>
+                                <div class='image-container'>
+                                    <img src='$imagen' alt='$imagen' />
+                                </div>
+                                <div class='informacion'>
+                                    <p> $descripcion </p>
+                                    <p> Precio: $$precio </p>
+                                    <p> Stock: $stock </p>
+                                    <button type='submit'> Agregar al carrito </button>
+                                </div>
+                            </div>
+                    </form>
                     ";
                 } else {
                     echo "
