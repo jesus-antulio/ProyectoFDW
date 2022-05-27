@@ -32,38 +32,35 @@
                     $id = $_SESSION['info'][$i]['id_producto'];
                     $nombre = $_SESSION['info'][$i]['nombre'];
                     $descripcion = $_SESSION['info'][$i]['descripcion'];
-                    $precio = "$".$_SESSION['info'][$i]['precio'];
+                    $precio = $_SESSION['info'][$i]['precio'];
                     $imagen = $_SESSION['info'][$i]['imagen'];
 
                     echo "
-                    <div class='producto'>
-                        <div class='producto-img'>
-                            <img src='$imagen'/>
+                    <form id='formulario' name='formulario' method='post' action='../controllers/cart.php'>
+                        <div class='producto'>
+                            <div class='producto-img'>
+                                <img src='$imagen'/>
+                                <input name='imagen' type='hidden' name='imagen' value='$imagen'>
+                            </div>
+                            <div class='producto-info'>
+                                <h2>$nombre</h2>
+                                <input name='producto' type='hidden' id='producto' value='$nombre' />
+                                <p>$descripcion</p>
+                                <input name='descripcion' type='hidden' id='descripcion' value='$descripcion' />
+                                <center> <p> $$precio</p> </center>
+                                <input name='precio' type='hidden' id='precio' value='$precio' />
+                                <input name='cantidad' type='hidden' id='cantidad' value=1 />
+                            </div>
+                            <div class='producto-btn'>
+                                <button class='btn-detalle'> <a href='../pages/detalleProducto.php?id=$id'>Ver</a> </button>
+                                <button class='btn-comprar'
+                                        type='submit'> Añadir al carrito </button>
+                                <!-- 
+                                <a href='../pages/detalleProducto.php?id=$id' class='btn-detalle'>Ver más</a>
+                                <a> comprar </a> -->
+                            </div>
                         </div>
-                        <div class='producto-info'>
-                            <h2>$nombre</h2>
-                            <p>$descripcion</p>
-                            <a href='info-producto.php?id=$id'>Ver más</a>
-                            <label>$precio</label>
-                        </div>
-                    </div>";
-
-
-                    // echo "
-                    // <div class='producto'>
-                    //     <div class='img'>
-                    //         <img src='$imagen' alt='$nombre'>
-                    //     </div>
-                    //     <div class='producto-info'>
-                    //         <h2>$nombre</h2>
-                    //         <p>$descripcion</p>
-                    //         <p>$precio</p>
-                    //     </div>
-                    //     <div class='btn-container'>
-                    //         <a href='../pages/producto.php?id='.$id.'' class='btn-ver'>Ver</a>
-                    //         <a href='../pages/carrito.php?id='.$id.'' class='btn-carrito'>Agregar al carrito</a>
-                    //     </div>
-                    // </div>";
+                    </form>";
                 }
             ?>
         </div>

@@ -10,7 +10,7 @@
 }
 
 .container h1 {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   text-align: center;
   font-size: 40pt;
 }
@@ -24,7 +24,7 @@
 
 .producto {
   width: 400px;
-  height: 400px;
+  height: auto;
   margin-top: 30px;
   background-color: rgb(210, 210, 210);
   border-radius: 5px;
@@ -53,7 +53,8 @@
 .producto .producto-info p {
   font-size: 12pt;
 }
-.producto .producto-info a {
+
+.producto .producto-btn a {
   text-decoration: none;
   font-weight: bold;
   color: black;
@@ -62,7 +63,7 @@
   border-radius: 100px;
   padding: 7px;
 }
-.producto .producto-info a:hover {
+.producto .producto-btn a:hover {
   text-decoration: none;
   font-weight: bold;
   color: black;
@@ -70,10 +71,6 @@
   border: 3px solid white;
   border-radius: 100px;
   padding: 7px;
-}
-.producto .producto-info label {
-  font-weight: bold;
-  margin-left: 65%;
 }
 
 .btn-agregar {

@@ -35,6 +35,7 @@ class CAD
             $row = $query->fetch(PDO::FETCH_NUM);
             if($row){
                 // echo $row[0].' - '.$row[1].' - '.$row[2].' - '.$row[3];
+                $_SESSION['idUsuario'] = $row[0];
                 $_SESSION['nombre'] = $row[1];
                 $_SESSION['correo'] = $row[2];
                 $_SESSION['telefono'] = $row[4];
