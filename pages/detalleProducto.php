@@ -35,6 +35,7 @@
                         <input name='descripcion' type='hidden' id='descripcion' value='$descripcion' />
                         <input name='precio' type='hidden' id='precio' value='$precio' />
                         <input name='cantidad' type='hidden' id='cantidad' value=1 />
+                        <input name='id_producto' type='hidden' id='id_producto' value='$id' />
 
                         <h1> $nombre </h1>
                             <div class='flex-container'>

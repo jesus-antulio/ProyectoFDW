@@ -29,39 +29,41 @@
                 $cad -> mostrarProductos();
 
                 for($i = 0; $i < $_SESSION['tam']; $i++){
-                    $id = $_SESSION['info'][$i]['id_producto'];
+                    $idP = $_SESSION['info'][$i]['id_producto'];
                     $nombre = $_SESSION['info'][$i]['nombre'];
                     $descripcion = $_SESSION['info'][$i]['descripcion'];
                     $precio = $_SESSION['info'][$i]['precio'];
                     $imagen = $_SESSION['info'][$i]['imagen'];
-
-                    echo "
-                    <form id='formulario' name='formulario' method='post' action='../controllers/cart.php'>
+            ?>
+                    <form method='post' action='../controllers/cart.php'>
+                        <input name='id_producto' type='hidden' id='id_producto' value='<?php echo $idP ?>' />
+                        <input name='imagen' type='hidden' name='imagen' value='<?php echo $imagen ?>'> 
+                        <input name='producto' type='hidden' id='producto' value='<?php echo $nombre ?>' />
+                        <input name='descripcion' type='hidden' id='descripcion' value='<?php echo $descripcion ?>' />
+                        <input name='precio' type='hidden' id='precio' value='<?php echo $precio ?>' />
+                        <input name='cantidad' type='hidden' id='cantidad' value=1 />
                         <div class='producto'>
                             <div class='producto-img'>
-                                <img src='$imagen'/>
-                                <input name='imagen' type='hidden' name='imagen' value='$imagen'>
+                                <img src='<?php echo $imagen ?>'/>
                             </div>
                             <div class='producto-info'>
-                                <h2>$nombre</h2>
-                                <input name='producto' type='hidden' id='producto' value='$nombre' />
-                                <p>$descripcion</p>
-                                <input name='descripcion' type='hidden' id='descripcion' value='$descripcion' />
-                                <center> <p> $$precio</p> </center>
-                                <input name='precio' type='hidden' id='precio' value='$precio' />
-                                <input name='cantidad' type='hidden' id='cantidad' value=1 />
+                                <h2><?php echo $nombre ?></h2>
+                                <p><?php echo $descripcion ?></p>
+                                <center> <p> $<?php echo $precio ?></p> </center>
                             </div>
                             <div class='producto-btn'>
-                                <button class='btn-detalle'> <a href='../pages/detalleProducto.php?id=$id'>Ver</a> </button>
+                                <button class='btn-detalle'> <a href='../pages/detalleProducto.php?id=<?php echo $idP ?>'>Ver</a> </button>
                                 <button class='btn-comprar'
                                         type='submit'> Añadir al carrito </button>
-                                <!-- 
-                                <a href='../pages/detalleProducto.php?id=$id' class='btn-detalle'>Ver más</a>
-                                <a> comprar </a> -->
+                                <?php if(isset($_SESSION['rol']) && $_SESSION['rol'] == 2){ ?>
+                                    <button class='btn-editar'><a href='../pages/editarProducto.php?id=$idP'>Editar</a></button>
+                                    <button class='btn-eliminar'><a href='../controllers/eliminarProducto.php?id=$idP'>Eliminar</a></button>
+                                <?php } ?>
                             </div>
                         </div>
-                    </form>";
-                }
+                    </form>
+            <?php
+            }
             ?>
         </div>
     </div>

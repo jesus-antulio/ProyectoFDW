@@ -19,8 +19,10 @@
             <div class="line"></div>
             <div class="datos">
                 <?php
-                $carrito = $_SESSION['carrito'];
-                $_SESSION['carrito'] = $carrito;                
+                if(isset($_SESSION['carrito'])){
+                    $carrito = $_SESSION['carrito'];
+                    $_SESSION['carrito'] = $carrito;               
+                }
                 $total=0;
 
                 if(isset($_SESSION['carrito'])){
@@ -44,39 +46,42 @@
                             for($i = 0; $i <= count($carrito)-1; $i++){
                                 if($carrito[$i]!=NULL){
                         ?>
-                        <div class='imgP'>
-                            <img src='<?php echo $carrito[$i]['imagen'] ?>'>
-                        </div>
-                        <div class='datP'>
-                            <h3><?php echo $carrito[$i]['producto'] ?></h3>
-                            <p><?php echo $carrito[$i]['descripcion'] ?></p>
-                            <div class='flex'>
-                                <p><b>$<?php echo $carrito[$i]['precio'] ?> </b></p>
-                                <p><b> <?php echo $carrito[$i]['cantidad'] ?> unidade(s) </b></p>
+                        <div class='flex-row'>
+                            <div class='imgP'>
+                                <img src='<?php echo $carrito[$i]['imagen'] ?>'>
+                            </div>
+                            <div class='datP'>
+                                <h3><?php echo $carrito[$i]['producto'] ?></h3>
+                                <p><?php echo $carrito[$i]['descripcion'] ?></p>
+                                <div class='flex'>
+                                    <p><b>$<?php echo $carrito[$i]['precio'] ?> </b></p>
+                                    <p><b> <?php echo $carrito[$i]['cantidad'] ?> unidade(s) </b></p>
+                                </div>
                             </div>
                         </div>
                         <?php
                                 $total += $carrito[$i]['precio'] * $carrito[$i]['cantidad'];
                                 }
-                            }
-                            echo "
+                            } 
+                        } else {
+                            echo "<h2>No hay productos en el carrito</h2>";
+                        }
+                        ?>
+                    </div>
+                    <div class='fin'>
                             <div class='total'>
-                                <p>Total: $".$total."</p>
+                                <p><b>Total: <?php echo "$$total"?> </b></p>
                             </div>
                             <div class='boton'>
                                 <form action='../controllers/comprar.php' method='POST'>
                                     <input type='hidden' name='total' value='".$total."'>
                                     <input type='submit' value='Comprar'>
                                 </form>
-                                <a href='../controllers/borrarCarrito.php'> <button>Borrar Carrito</burron> </a>
                             </div>
-                            ";
-                        } else {
-                            echo "<h2>No hay productos en el carrito</h2>";
-                        }
-                        ?>
+                            <div class = 'boton'>
+                                <button> <a href='../controllers/borrarCarrito.php'> Vaciar Carrito </a> </button>
+                            </div>
                     </div>
-                    
                 </div>                
             </div>
         </div>

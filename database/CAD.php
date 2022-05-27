@@ -81,6 +81,23 @@ class CAD
         }
     }
 
+    static public function updateStock($id){
+        $con = new Conexion(); //Establecer conexión a la BD
+        $query = $con->conectar()->prepare("SELECT * FROM productos WHERE id_producto = '$id'");
+        if($query->execute()){
+            $row = $query->fetch(PDO::FETCH_NUM);
+            if($row){
+                $stock = $row[3];
+                $stock--;
+                $query = $con->conectar()->prepare("UPDATE productos SET cantidad = '$stock' WHERE id_producto = '$id'");
+                if($query->execute()){
+                    return true;
+                }
+            } else {
+            }
+        }
+    }
+
     static public function crearVenta($idUsuario, $productos, $total){
         $con = new Conexion(); //Establecer conexión a la BD
         $query = $con->conectar()->prepare("INSERT INTO venta (id_usuario, productos, total, fecha_compra) VALUES ('$idUsuario', '$productos', '$total', NOW())");

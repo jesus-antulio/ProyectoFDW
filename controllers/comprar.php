@@ -1,6 +1,7 @@
 <?php
     session_start();
     require_once '../database/CAD.php'; //ARchivo que se encargara de realizar la conexion a la BD
+    $cad = new CAD();
 
 
     if(!isset($_SESSION['idUsuario'])){
@@ -16,13 +17,14 @@
                 $productos .= $producto . ',';
                 $descripcion = $carrito[$i]['descripcion'];
                 $precio = $carrito[$i]['precio'];
-                $cantidad = $carrito[$i]['cantidad'];                
+                $cantidad = $carrito[$i]['cantidad'];
+                $id_producto = $carrito[$i]['id_producto'];
+                $cad -> updateStock($id_producto);
             }
         }
         $total = $_SESSION['total'] = $_POST['total'];
 
         #Crear venta en la BD
-        $cad = new CAD();
         $cad -> crearVenta($idUsuario, $productos, $total);
     }
 

@@ -25,6 +25,10 @@
     align-items: center;
 }
 
+.image-container img {
+    width: 400px;
+}
+
 .informacion{
     width: 100%;
     height: auto;
