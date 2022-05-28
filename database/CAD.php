@@ -36,6 +36,24 @@ class CAD
         }
     }
 
+    static public function updateUsuario($id, $nombre, $correo, $telefono, $rol){
+        $con = new Conexion(); //Establecer conexión a la BD
+        $query = $con->conectar()->prepare("UPDATE usuarios SET nombre = '$nombre', correo = '$correo', telefono = '$telefono', rol = '$rol' WHERE id_usuario = '$id'");
+        if($query->execute()){
+            echo
+            '<script>
+                    alert("El usuario '.$nombre.' se ha modificado correctamente");
+                    window.location.href="../pages/perfil.php";	
+            </script>';
+        }else{
+            echo
+            '<script>
+                    alert("Error al modificar el usuario");
+                    window.location.href="../pages/editarUsuario.php";
+            </script>';
+        }
+    }
+
     static public function deleteUsuario($id){
         $con = new Conexion(); //Establecer conexión a la BD
         $query = $con->conectar()->prepare("DELETE FROM usuarios WHERE id_usuario = '$id'");
