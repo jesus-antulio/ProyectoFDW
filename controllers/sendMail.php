@@ -17,7 +17,7 @@
     $correo = $_SESSION['correo'];
     $telefono = $_SESSION['telefono'];
     $carrito = $_SESSION['carrito'];
-    $total = $_SESSION['total'];
+    $total = "$".$_SESSION['total'];
     
     #Mandar correo de confirmación de compra
     $mail = new PHPMailer(true);
@@ -55,9 +55,6 @@
                                     </h2>
                                     <p style='font-size: 18pt; line-height: 0.8em;'>
                                         Hemos recibido tu compra, te enviaremos un correo de confirmación en cuanto esta sea procesada.
-                                    </p>
-                                    <p style='font-size: 18pt; line-height: 0.8em;'>
-                                        El monto total de tu compra es: <b>$$total</b>. Recuerda que el cobro se realizara en cuanto tu compra sea confirmada
                                     </p>
                                     <p style='font-size: 18pt; line-height: 0.8em;'>
                                         Para cualquier duda o aclaración, puedes contactarnos a través de nuestro correo electrónico.

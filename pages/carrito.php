@@ -73,10 +73,16 @@
                                 <p><b>Total: <?php echo "$$total"?> </b></p>
                             </div>
                             <div class='boton'>
+                                <?php if(isset($_SESSION['carrito'])){ ?>
                                 <form action='../controllers/comprar.php' method='POST'>
                                     <input type='hidden' name='total' value='".$total."'>
                                     <input type='submit' value='Comprar'>
                                 </form>
+                                <?php } else {  ?>
+                                <form action='../controllers/comprar.php' method='POST'>
+                                    <input type='submit' value='Comprar' disabled>
+                                </form>
+                                <?php } ?>
                             </div>
                             <div class = 'boton'>
                                 <button> <a href='../controllers/borrarCarrito.php'> Vaciar Carrito </a> </button>

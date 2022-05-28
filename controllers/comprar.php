@@ -22,7 +22,8 @@
                 $cad -> updateStock($id_producto);
             }
         }
-        $total = $_SESSION['total'] = $_POST['total'];
+        $total = $_POST['total'];
+        $_SESSION['total'] = $total;
 
         #Crear venta en la BD
         $cad -> crearVenta($idUsuario, $productos, $total);
