@@ -72,14 +72,16 @@
                 ";
             }
             
-            if(isset($_SESSION['rol']) && $_SESSION['rol'] == 2){
-                echo "
-                <center>
-                    <button class='editar'> 
-                        <a>Editar</a>
+            if(isset($_SESSION['rol']) && $_SESSION['rol'] == 2){ ?>
+                <div class="opc">
+                    <button> 
+                        <a href='../pages/editarProducto.php?id=<?php echo $id ?>'>Editar</a>
                     </button>
-                </center>
-                ";
+                    <button > 
+                        <a href='../controllers/eliminarProducto.php?id=<?php echo $id ?>'>Eliminar</a>
+                    </button>
+                </div>
+        <?php   
             }
         ?>
     

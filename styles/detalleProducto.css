@@ -62,7 +62,40 @@
 .informacion button:hover {background-color: rgb(232, 184, 108)}
 
 .informacion button:active {
-background-color: rgb(113, 210, 113);
-box-shadow: 0 5px #666;
-transform: translateY(4px);
+    transform: translateY(4px);
+}
+
+.opc{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.opc button{
+    font-weight: bold;
+    color: white;
+    background-color: rgb(232, 184, 108);
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 7px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 25%;
+}
+.opc button:hover{
+    font-weight: bold;
+    color: white;
+    background-color: rgb(113, 210, 113);
+    padding: 7px;
+    cursor: pointer;
+}
+.opc button:active {
+    transform: translateY(4px);
+}
+.opc a{
+    text-decoration: none;
+    color: white;
 }
