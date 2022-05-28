@@ -49,15 +49,15 @@
                             <div class='producto-info'>
                                 <h2><?php echo $nombre ?></h2>
                                 <p><?php echo $descripcion ?></p>
-                                <center> <p> $<?php echo $precio ?></p> </center>
+                                <center> <p> <b> $<?php echo $precio ?></p> </b> </center>
                             </div>
                             <div class='producto-btn'>
                                 <button class='btn-detalle'> <a href='../pages/detalleProducto.php?id=<?php echo $idP ?>'>Ver</a> </button>
                                 <button class='btn-comprar'
                                         type='submit'> Añadir al carrito </button>
                                 <?php if(isset($_SESSION['rol']) && $_SESSION['rol'] == 2){ ?>
-                                    <button class='btn-editar'><a href='../pages/editarProducto.php?id=<?php echo $idP ?>'>Editar</a></button>
-                                    <button class='btn-eliminar'><a href='../controllers/eliminarProducto.php?id=<?php echo $idP ?>'>Eliminar</a></button>
+                                <button class='btn-editar'><a href='../pages/editarProducto.php?id=<?php echo $idP ?>'>Editar</a></button>
+                                <button class='btn-eliminar'><a href='../controllers/eliminarProducto.php?id=<?php echo $idP ?>'>Eliminar</a></button>
                                 <?php } ?>
                             </div>
                         </div>

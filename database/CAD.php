@@ -100,6 +100,25 @@ class CAD
         }
     }
 
+    static public function eliminarProducto($id_producto){
+        $con = new Conexion(); //Establecer conexión a la BD
+        $query = $con->conectar()->prepare("DELETE FROM productos WHERE id_producto = '$id_producto'");
+
+        if ($query->execute()) {
+            echo
+            '<script>
+                    alert("El producto se ha eliminado correctamente");
+                    window.location.href="../pages/productos.php";	
+            </script>';
+        } else {
+            echo
+            '<script>
+                    alert("Error al eliminar el producto");
+                    window.location.href="../pages/productos.php";
+            </script>';
+        }
+    }
+
     static public function updateStock($id){
         $con = new Conexion(); //Establecer conexión a la BD
         $query = $con->conectar()->prepare("SELECT * FROM productos WHERE id_producto = '$id'");
