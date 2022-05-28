@@ -27,6 +27,27 @@ class CAD
         }
     }
 
+    static public function getUsuarios(){
+        $con = new Conexion(); //Establecer conexión a la BD
+        $query = $con->conectar()->prepare("SELECT * FROM usuarios");
+        if($query->execute()){
+            $usuarios = $query->fetchAll();
+            return $usuarios;
+        }
+    }
+
+    static public function deleteUsuario($id){
+        $con = new Conexion(); //Establecer conexión a la BD
+        $query = $con->conectar()->prepare("DELETE FROM usuarios WHERE id_usuario = '$id'");
+        if($query->execute()){
+            echo
+            '<script>
+                    alert("El usuario se ha eliminado correctamente");
+                    window.location.href="../pages/perfil.php";
+            </script>';
+        }
+    }
+
     static public function verificaUsuario($correo, $password) {
         $con = new Conexion(); //Establecer conexión a la BD
         $query = $con->conectar()->prepare("SELECT * FROM usuarios WHERE correo = '$correo' AND contraseña = '$password'");

@@ -43,7 +43,39 @@
                 <p> <b> ID de usuario: </b> <?php echo $_SESSION['idUsuario']; ?> </p>
 
             </div>
-        </div>    
+        </div>
+        <?php if(isset($_SESSION['rol']) && isset($_SESSION['rol'])==2){?>
+        <h1> Modificar Cuentas </h1>
+        <div class="flex-container">
+            <center>
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Tipo de Cuenta</th>
+                    </tr>
+                    <?php
+                    require "../database/CAD.php";
+                    $cad = new CAD();
+                    $usuarios[] = $cad->getUsuarios();
+                    for($i = 0; $i < count($usuarios[0]); $i++){
+                        echo '<tr>';
+                        echo '<td>'.$usuarios[0][$i]['id_usuario'].'</td>';
+                        echo '<td>'.$usuarios[0][$i]['nombre'].'</td>';
+                        echo '<td>'.$usuarios[0][$i]['correo'].'</td>';
+                        echo '<td>'.$usuarios[0][$i]['telefono'].'</td>';
+                        echo '<td>'.$usuarios[0][$i]['rol'].'</td>';
+                        echo '<td><button><a href="editarUsuario.php?id='.$usuarios[0][$i]['id_usuario'].'">Editar</a></button></td>';
+                        echo '<td><button><a href="../controllers/eliminarUsuario.php?id='.$usuarios[0][$i]['id_usuario'].'">Eliminar</a></button></td>';
+                        echo '</tr>';
+                    }
+                    ?>
+                </table>
+            </center>
+        </div>
+        <?php } ?>
     </div>
 
     <?php include '../components/footer.php'; ?>
