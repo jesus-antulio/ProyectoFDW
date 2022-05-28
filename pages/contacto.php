@@ -19,7 +19,7 @@
                 <nota>*Campos obligatorios</nota>
             </div>
             
-            <form>
+            <form action="../controllers/contacto.php" method="post">
                 <p> <span>*</span>Nombre </p>
                 <input type="text" name="nombre" placeholder="Nombre">
                 <p> Apellido: </p>
