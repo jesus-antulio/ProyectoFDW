@@ -26,6 +26,10 @@
                         $band = true;
                     }
                 }
+                
+                if($stock <= 0){
+                    header('Location: ../pages/productos.php');
+                }
 
                 if($band){
                     echo "

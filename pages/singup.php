@@ -13,11 +13,11 @@
             <div class="datos">
                 <form action="../controllers/singup.php" method="post">
                     <p> Nombre </p>
-                    <input type="text" name="nombre" placeholder="Nombre" >
+                    <input type="text" name="nombre" placeholder="Nombre" required>
                     <p> Correo </p>
-                    <input type="text" name="correo" placeholder="Correo" >
+                    <input type="text" name="correo" placeholder="Correo" required>
                     <p> Contraseña </p>
-                    <input type="password" name="pass" placeholder="Contraseña" >
+                    <input type="password" name="pass" placeholder="Contraseña" required>
                     <p> Telefono </p>
                     <input type="text" name="phone" placeholder="Telefono">
                     <p> </p>

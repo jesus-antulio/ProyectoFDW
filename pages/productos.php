@@ -34,6 +34,7 @@
                     $descripcion = $_SESSION['info'][$i]['descripcion'];
                     $precio = $_SESSION['info'][$i]['precio'];
                     $imagen = $_SESSION['info'][$i]['imagen'];
+                    $stock = $_SESSION['info'][$i]['cantidad'];
             ?>
                     <form method='post' action='../controllers/cart.php'>
                         <input name='id_producto' type='hidden' id='id_producto' value='<?php echo $idP ?>' />
@@ -52,9 +53,12 @@
                                 <center> <p> <b> $<?php echo $precio ?></p> </b> </center>
                             </div>
                             <div class='producto-btn'>
+                                <?php if($stock > 0){ ?>
                                 <button class='btn-detalle'> <a href='../pages/detalleProducto.php?id=<?php echo $idP ?>'>Ver</a> </button>
-                                <button class='btn-comprar'
-                                        type='submit'> Añadir al carrito </button>
+                                <button class='btn-carrito' type='submit'>Agregar al carrito</button>
+                                <?php }else{ ?>
+                                <button class='btn-carrito' disabled>Agotado</button>
+                                <?php } ?>
                                 <?php if(isset($_SESSION['rol']) && $_SESSION['rol'] == 2){ ?>
                                 <button class='btn-editar'><a href='../pages/editarProducto.php?id=<?php echo $idP ?>'>Editar</a></button>
                                 <button class='btn-eliminar'><a href='../controllers/eliminarProducto.php?id=<?php echo $idP ?>'>Eliminar</a></button>
